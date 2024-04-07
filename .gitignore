@@ -1,0 +1,10 @@
+venv
+pythonvenv
+notes.txt
+__pycache__
+config.ini
+ansible.cfg
+app.py
+app2.py
+app_cmd.py
+run_ansible-runner.py

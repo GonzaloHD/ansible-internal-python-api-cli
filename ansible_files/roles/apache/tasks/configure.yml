@@ -1,0 +1,21 @@
+---
+
+- name: Check if Apache configuration file exists
+  stat:
+    path: /etc/apache2/apache2.conf
+  register: apache_config
+
+- name: Copy Apache configuration file if not exists or changed
+  copy:
+    src: files/apache2.conf   # Assuming this is your custom Apache config file
+    dest: /etc/apache2/apache2.conf
+    backup: yes
+  when: apache_config.stat.exists == false
+    # or apache_config.stat.checksum != ansible_checksum
+  
+- name: Render and copy index.html file
+  template:
+    src: files/index.html.j2  # Use the Jinja2 template file
+    dest: /var/www/html/index.html
+  notify:
+    - restart apache
