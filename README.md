@@ -1,10 +1,10 @@
 # ansible-internal-python-api-cli
 
-Run ansible playbook with roles using Ansible Internal Python API
+Example for running ansible playbook with roles using Ansible Internal Python API
 
-## Internal Python API:
+## Internal Asible Python API:
 
-This API provides programmatic access to Ansible functionalities.
+The Internal Ansible Python API provides programmatic access to Ansible functionalities.
 While it might seem convenient, it's not officially documented or supported by the Ansible team.
 Drawbacks of Internal API:
 
